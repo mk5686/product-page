@@ -7,6 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <script defer>
+        function myFunction() {
+            var x = document.getElementById("nav");
+            if (x.style.display == "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -18,19 +28,30 @@
             <div class="heading2">
                 <h2>Lorem</h2>
             </div>
-            <div class="navigations font none">
+            <div id="nav" class="navigations font">
                 <div class="decoration"><a href="#">About</a></div>
-                <div>Services</div>
-                <div>Cuisine</div>
-                <div>Gallery</div>
-                <div>Contact</div>
-                <div>Book</div>
+                <div><a href="#"> Services</a></div>
+                <div><a href="#"> Cuisine</a></div>
+                <div> <a href="#">Gallery</a></div>
+                <div><a href="#">Contact</a></div>
+                <div> <a href="#">Book</a></div>
             </div>
             <div class="button none"><button>
                     Cart
                 </button>
 
             </div>
+            <div class="toggle">
+                <a href="javascript:void(0);" class="toggle-button" onclick="myFunction()">
+                    <span class=" first bar"></span>
+                    <span class="bar mid"></span>
+                    <span class="bar"></span>
+                </a>
+            </div>
+            <svg class="cart-svg" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
+                <path
+                    d="M10 19.5c0 .829-.672 1.5-1.5 1.5s-1.5-.671-1.5-1.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5zm3.5-1.5c-.828 0-1.5.671-1.5 1.5s.672 1.5 1.5 1.5 1.5-.671 1.5-1.5c0-.828-.672-1.5-1.5-1.5zm1.336-5l1.977-7h-16.813l2.938 7h11.898zm4.969-10l-3.432 12h-12.597l.839 2h13.239l3.474-12h1.929l.743-2h-4.195z" />
+            </svg>
 
 
 
@@ -79,6 +100,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>

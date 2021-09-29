@@ -23,7 +23,7 @@ body{
     align-items: start;
     padding-left:45%;
 }
-.navigations{
+#nav{
     display: flex;
     flex-direction: column;
     justify-content:space-between;
@@ -114,6 +114,7 @@ div .border{
     margin: 10px;
     text-align: center;
     align-items: center;
+    box-shadow: .8rem .8rem .8rem #cac2c2;
 }
   .textt{
       padding-top:20px;
@@ -133,6 +134,39 @@ a{
 .heading2{
     display: none;
 }
+.toggle-button{
+    position:absolute;
+    top:30px;
+    left:50px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width:30px;
+    height: 21px;
+}
+.bar{
+    height: 3px;
+    width:100%;
+    background-color: #d94d3e;
+    border-radius:10px;
+
+}
+.mid{
+    width:130%;
+}
+.first{
+    width:70%
+}
+.cart-svg{
+    width:60px;
+    position:absolute;
+    fill:#d94d3e;
+    right:10%;
+    top:23px;
+    display: none;
+}
+
+
   
 @media (max-width:600px){
     .container{
@@ -147,17 +181,19 @@ a{
     }
     .head{
         font-size:1.3rem;
-        padding-left:10px;
+        padding-left:30px;
         padding-top:20px;
     }
     .section3{
         flex-wrap: wrap;
         justify-content: center;
-        padding:20px;
-        padding-top:0px;
+        align-items: center;
+        /* padding:10px; */
+        padding:0px;
+        /* background-color: red; */
     }
     .block{
-        width: 110px;
+        width: 120px;
         height: 150px;
         background-color: #fff;
         display: inline-block;
@@ -168,6 +204,7 @@ a{
         text-align: center;
         align-items: center;
     }
+   
    .heading2{
        display:block;
        font-size: 1.5rem;
@@ -188,4 +225,14 @@ a{
     width: 100px;
     height: 100px;
    }
+   .toggle-button{
+       display: flex;
+   }
+   #nav{
+       display: none;
+   }
+   .cart-svg{
+       display: block;
+   }
+   
 }
